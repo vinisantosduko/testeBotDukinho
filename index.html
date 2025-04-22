@@ -6,30 +6,26 @@
   <title>Dukinho ChatBot</title>
 </head>
 <body>
+  
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-  <h1>Bem-vindo à página com Chat!</h1>
-  <p>O botão do chatbot vai aparecer no canto inferior da tela automaticamente.</p>
-
-  <script type='text/javascript'>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US';
-
-        embeddedservice_bootstrap.init(
-          '00Dak00000PJn6g',
-          'WebChatBot',
-          'https://empathetic-goat-1palnx-dev-ed.trailblaze.my.site.com/ESWWebChatBot1743721384161',
-          {
-            scrt2URL: 'https://empathetic-goat-1palnx-dev-ed.trailblaze.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    };
-  </script>
-  <script type='text/javascript'
-          src='https://empathetic-goat-1palnx-dev-ed.trailblaze.my.site.com/ESWWebChatBot1743721384161/assets/js/bootstrap.min.js'
-          onload='initEmbeddedMessaging()'></script>
+			embeddedservice_bootstrap.init(
+				'00Dak00000PJn6g',
+				'WebChatBot',
+				'https://empathetic-goat-1palnx-dev-ed.trailblaze.my.site.com/ESWWebChatBot1743721384161',
+				{
+					scrt2URL: 'https://empathetic-goat-1palnx-dev-ed.trailblaze.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://empathetic-goat-1palnx-dev-ed.trailblaze.my.site.com/ESWWebChatBot1743721384161/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+  
 </body>
 </html>
