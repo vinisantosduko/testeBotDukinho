@@ -2,37 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dukinho ChatBot</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url('fundo.png');
-      background-size: contain;
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-color: #000; /* Cor de fundo caso a imagem não preencha toda a largura */
-      min-height: 100vh;
+      overflow-x: auto;
+      overflow-y: auto;
     }
     
-    /* Alternativa: se quiser que a imagem defina o tamanho da página */
-    .image-container {
-      width: 100%;
-      min-height: 100vh;
-      background-image: url('fundo.png');
-      background-size: auto;
-      background-position: top center;
-      background-repeat: no-repeat;
+    .container {
+      position: relative;
+      display: inline-block;
+      min-width: 100%;
+    }
+    
+    .background-img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: none; /* Permite que a imagem mantenha seu tamanho original */
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="fundo.png" alt="Background" class="background-img">
+  </div>
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.language = 'en_US';
 
 			embeddedservice_bootstrap.init(
 				'00Dak00000PJn6g',
